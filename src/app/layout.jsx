@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Mariam Kanj Portfolio',
+  title: 'Mariam',
   description: 'Personal portfolio built with Next.js and Tailwind',
   icons: {
     icon: '/favicon.ico',
