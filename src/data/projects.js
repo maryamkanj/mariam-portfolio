@@ -4,7 +4,7 @@ const projects = [
     "title": "Portfolio Website",
     "description": "A responsive portfolio website built with Next.js and Tailwind CSS featuring smooth animations, project showcases, and professional presentation.",
     "tech": ["Next.js", "Tailwind CSS", "TypeScript", "Responsive Design"],
-    "liveUrl": "https://mariam-portfolio-huu8qzwx9-kanjmariam.vercel.app/",
+    "liveUrl": "https://mariam-portfolio-zeta.vercel.app/",
     "repoUrl": "https://github.com/maryamkanj/mariam-portfolio.git",
     "image": "/images/Portfolio.png",
     "features": [
