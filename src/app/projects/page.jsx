@@ -35,10 +35,10 @@ export default function Projects() {
       <div className="container mx-auto max-w-7xl w-full relative z-10">
         <div className={`transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent mb-4 cursor-pointer">
               My Projects
             </h2>
-            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto cursor-pointer">
               Here are some of the projects I've worked on. Each one represents a unique challenge and learning experience.
             </p>
           </div>
@@ -51,9 +51,9 @@ export default function Projects() {
 
           {projects.length === 0 && (
             <div className="text-center py-20">
-              <div className="text-6xl mb-4">🚧</div>
-              <h3 className="text-2xl font-bold text-slate-600 mb-2">Projects Coming Soon</h3>
-              <p className="text-slate-500">I'm currently working on some exciting projects. Check back later!</p>
+              <div className="text-6xl mb-4 cursor-pointer">🚧</div>
+              <h3 className="text-2xl font-bold text-slate-600 mb-2 cursor-pointer">Projects Coming Soon</h3>
+              <p className="text-slate-500 cursor-pointer">I'm currently working on some exciting projects. Check back later!</p>
             </div>
           )}
         </div>

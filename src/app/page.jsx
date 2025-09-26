@@ -55,24 +55,24 @@ export default function Home() {
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight text-slate-900">
+          <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight text-slate-900 cursor-pointer">
             Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent cursor-pointer">
               Mariam Kanj
             </span>
           </h1>
-          <h2 className="text-xl sm:text-2xl md:text-3xl text-slate-700 font-medium tracking-wide">
+          <h2 className="text-xl sm:text-2xl md:text-3xl text-slate-700 font-medium tracking-wide cursor-pointer">
             Full-Stack Developer
           </h2>
-          <p className="max-w-prose mx-auto text-lg sm:text-xl text-slate-600 leading-relaxed">
+          <p className="max-w-prose mx-auto text-lg sm:text-xl text-slate-600 leading-relaxed cursor-pointer">
             I specialize in building elegant and scalable web applications with a focus on modern technologies and exceptional user experiences.
           </p>
 
           {/* Animated technology highlight */}
           <div className="py-4">
-            <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-2xl px-6 py-3 shadow-sm border border-slate-200">
-              <span className="text-slate-500 text-sm font-medium">Currently working with:</span>
-              <span className="text-violet-600 font-semibold text-lg typewriter">
+            <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-2xl px-6 py-3 shadow-sm border border-slate-200 cursor-pointer">
+              <span className="text-slate-500 text-sm font-medium cursor-pointer">Currently working with:</span>
+              <span className="text-violet-600 font-semibold text-lg typewriter cursor-pointer">
                 {technologies[currentTech]}
               </span>
             </div>
@@ -80,13 +80,13 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4 sm:pt-6 justify-center items-center">
             <Link href="/projects" className="flex-1 max-w-xs w-full">
-              <button className="w-full bg-violet-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold shadow-lg hover:shadow-2xl hover:bg-violet-700 transition-all duration-300 transform hover:-translate-y-1 active:scale-95 text-base sm:text-lg">
+              <button className="w-full bg-violet-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold shadow-lg hover:shadow-2xl hover:bg-violet-700 transition-all duration-300 transform hover:-translate-y-1 active:scale-95 text-base sm:text-lg cursor-pointer">
                 View My Work
               </button>
             </Link>
 
             <Link href="/contact" className="flex-1 max-w-xs w-full">
-              <button className="w-full border-2 border-violet-600 text-violet-600 px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold hover:bg-violet-600 hover:text-white transition-all duration-300 active:scale-95 text-base sm:text-lg">
+              <button className="w-full border-2 border-violet-600 text-violet-600 px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold hover:bg-violet-600 hover:text-white transition-all duration-300 active:scale-95 text-base sm:text-lg cursor-pointer">
                 Get In Touch
               </button>
             </Link>
@@ -97,7 +97,7 @@ export default function Home() {
               {technologies.map((tech, index) => (
                 <span
                   key={tech}
-                  className={`px-3 py-1 sm:px-4 sm:py-1.5 bg-white text-slate-700 rounded-full text-xs sm:text-sm font-medium border transition-all duration-300 hover:bg-violet-100 hover:text-violet-700 ${
+                  className={`px-3 py-1 sm:px-4 sm:py-1.5 bg-white text-slate-700 rounded-full text-xs sm:text-sm font-medium border transition-all duration-300 hover:bg-violet-100 hover:text-violet-700 cursor-pointer ${
                     index === currentTech 
                       ? "border-violet-400 bg-violet-50 text-violet-700 scale-110" 
                       : "border-slate-200"

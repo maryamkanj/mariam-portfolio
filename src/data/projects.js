@@ -1,22 +1,5 @@
 const projects = [
   {
-    "id": "proj-1",
-    "title": "Portfolio Website",
-    "description": "A responsive portfolio website built with Next.js and Tailwind CSS featuring smooth animations, project showcases, and professional presentation.",
-    "tech": ["Next.js", "Tailwind CSS", "TypeScript", "Responsive Design"],
-    "liveUrl": "https://mariam-portfolio-zeta.vercel.app/",
-    "repoUrl": "https://github.com/maryamkanj/mariam-portfolio.git",
-    "image": "/images/Portfolio.png",
-    "features": [
-    "Responsive design for all devices",
-    "Modern UI with smooth animations",
-    "Project showcase with live demos",
-    "Professional resume download",
-    "Contact form functionality",
-    "Clean and organized code structure"
-    ]
-    },
-  {
     id: 'proj-2',
     title: 'GiveLeb',
     description: 'A modern, full-stack donation platform that connects generous donors with individuals or organizations in need. Designed with transparency, security, and community engagement at its core.',

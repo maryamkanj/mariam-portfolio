@@ -48,32 +48,32 @@ export default function App() {
         <div className={`transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           
           <header className="text-center mb-10">
-            <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent cursor-pointer">
               Mariam Kanj
             </h1>
-            <p className="text-lg text-slate-600 mb-2">Full-Stack Web Developer</p>
-            <div className="w-24 h-1 section-divider mx-auto rounded-full"></div>
+            <p className="text-lg text-slate-600 mb-2 cursor-pointer">Full-Stack Web Developer</p>
+            <div className="w-24 h-1 section-divider mx-auto rounded-full cursor-pointer"></div>
           </header>
 
           <section className="flex flex-col md:flex-row items-center justify-between mb-8">
             <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 space-y-2">
-              <h2 className="text-xl font-semibold text-violet-800">Contact</h2>
-              <p className="flex items-center gap-2 text-slate-600">
+              <h2 className="text-xl font-semibold text-violet-800 cursor-pointer">Contact</h2>
+              <p className="flex items-center gap-2 text-slate-600 cursor-pointer">
                 Beirut, Lebanon
               </p>
-              <p className="flex items-center gap-2 text-slate-600">
+              <p className="flex items-center gap-2 text-slate-600 cursor-pointer">
                 kanjmariam696@gmail.com
               </p>
-              <p className="flex items-center gap-2 text-slate-600">
+              <p className="flex items-center gap-2 text-slate-600 cursor-pointer">
                 +961 71-419-226
               </p>
               <p className="flex items-center gap-2 text-slate-600">
-                <a href="https://linkedin.com/in/mariamkanj" target="_blank" rel="noopener noreferrer" className="hover:underline">linkedin.com/in/mariamkanj</a>
+                <a href="https://linkedin.com/in/mariamkanj" target="_blank" rel="noopener noreferrer" className="hover:underline cursor-pointer">linkedin.com/in/mariamkanj</a>
               </p>
             </div>
             <div className="md:w-1/2">
-              <h2 className="text-xl font-semibold text-violet-800 mb-2">Professional Summary</h2>
-              <p className="text-slate-700 leading-relaxed text-base">
+              <h2 className="text-xl font-semibold text-violet-800 mb-2 cursor-pointer">Professional Summary</h2>
+              <p className="text-slate-700 leading-relaxed text-base cursor-pointer">
                 Results-driven Computer Science graduate with hands-on experience in full-stack web
                 development, mobile app development, and data analysis. Skilled in frontend frameworks
                 (React, Next.js, Angular, Flutter) and backend technologies (ASP.NET, PHP/Laravel, Node.js, SQL
@@ -84,11 +84,11 @@ export default function App() {
             </div>
           </section>
 
-          <hr className="my-8 border-t border-gray-200" />
+          <hr className="my-8 border-t border-gray-200 cursor-pointer" />
 
           <div className="space-y-8">
-            <section className="w-full p-6 sm:p-8 bg-white rounded-lg shadow-sm border border-gray-200 hover-lift">
-              <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">Professional Experience</h3>
+            <section className="w-full p-6 sm:p-8 bg-white rounded-lg shadow-sm border border-gray-200 hover-lift cursor-pointer">
+              <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent cursor-pointer">Professional Experience</h3>
               <div className="space-y-6">
                 {[
                   {
@@ -127,14 +127,14 @@ export default function App() {
                     points: ["Developed RESTful APIs and controllers using ASP.NET (C#).", "Executed SQL Server CRUD operations for enterprise data management.", "Applied asynchronous programming for improved responsiveness.", "Created dynamic Angular frontends integrated with DevExpress components.", "Ensured seamless frontend-backend integration for enterprise systems."]
                   }
                 ].map((exp, index) => (
-                  <div key={index} className="pl-4 py-2 border-l border-purple-500">
+                  <div key={index} className="pl-4 py-2 border-l border-purple-500 cursor-pointer">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
-                      <h4 className="font-semibold text-violet-800">{exp.position} - {exp.company}</h4>
-                      <span className="text-slate-600 text-sm mt-1 sm:mt-0">{exp.period} | {exp.type}</span>
+                      <h4 className="font-semibold text-violet-800 cursor-pointer">{exp.position} - {exp.company}</h4>
+                      <span className="text-slate-600 text-sm mt-1 sm:mt-0 cursor-pointer">{exp.period} | {exp.type}</span>
                     </div>
-                    <ul className="list-disc ml-5 text-slate-700 text-sm space-y-1">
+                    <ul className="list-disc ml-5 text-slate-700 text-sm space-y-1 cursor-pointer">
                       {exp.points.map((point, idx) => (
-                        <li key={idx}>{point}</li>
+                        <li key={idx} className="cursor-pointer">{point}</li>
                       ))}
                     </ul>
                   </div>
@@ -143,61 +143,61 @@ export default function App() {
             </section>
 
             <section className="grid md:grid-cols-2 gap-6">
-              <div className="w-full p-6 sm:p-8 bg-white rounded-lg shadow-sm border border-gray-200 hover-lift">
-                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">Technical Skills</h3>
+              <div className="w-full p-6 sm:p-8 bg-white rounded-lg shadow-sm border border-gray-200 hover-lift cursor-pointer">
+                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent cursor-pointer">Technical Skills</h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-violet-800 mb-2">Programming Languages</h4>
+                    <h4 className="font-semibold text-violet-800 mb-2 cursor-pointer">Programming Languages</h4>
                     <div className="flex flex-wrap gap-2">
                       {["Python", "JavaScript", "TypeScript", "C#", "SQL", "Dart", "Java", "PHP", "C++"].map((skill) => (
-                        <span key={skill} className="px-3 py-1 bg-gradient-to-r from-violet-100 to-fuchsia-100 text-violet-700 border border-violet-200 rounded-full text-sm">{skill}</span>
+                        <span key={skill} className="px-3 py-1 bg-gradient-to-r from-violet-100 to-fuchsia-100 text-violet-700 border border-violet-200 rounded-full text-sm cursor-pointer">{skill}</span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-violet-800 mb-2">Web Development</h4>
+                    <h4 className="font-semibold text-violet-800 mb-2 cursor-pointer">Web Development</h4>
                     <div className="flex flex-wrap gap-2">
                       {["React.js", "Next.js", "Angular", "Node.js", "ASP.NET", "Laravel", "HTML5", "CSS3", "JavaScript (ES6+)"].map((skill) => (
-                        <span key={skill} className="px-3 py-1 bg-gradient-to-r from-violet-100 to-fuchsia-100 text-violet-700 border border-violet-200 rounded-full text-sm">{skill}</span>
+                        <span key={skill} className="px-3 py-1 bg-gradient-to-r from-violet-100 to-fuchsia-100 text-violet-700 border border-violet-200 rounded-full text-sm cursor-pointer">{skill}</span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-violet-800 mb-2">Mobile & Tools</h4>
+                    <h4 className="font-semibold text-violet-800 mb-2 cursor-pointer">Mobile & Tools</h4>
                     <div className="flex flex-wrap gap-2">
                       {["Flutter", "Git", "GitHub", "Figma", "Jira", "DevExpress", "MySQL", "SQL Server"].map((skill) => (
-                        <span key={skill} className="px-3 py-1 bg-gradient-to-r from-violet-100 to-fuchsia-100 text-violet-700 border border-violet-200 rounded-full text-sm">{skill}</span>
+                        <span key={skill} className="px-3 py-1 bg-gradient-to-r from-violet-100 to-fuchsia-100 text-violet-700 border border-violet-200 rounded-full text-sm cursor-pointer">{skill}</span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-violet-800 mb-2">Core Skills</h4>
+                    <h4 className="font-semibold text-violet-800 mb-2 cursor-pointer">Core Skills</h4>
                     <div className="flex flex-wrap gap-2">
                       {["Full-Stack Development", "RESTful APIs", "CRUD Operations", "OOP", "Asynchronous Programming", "Responsive UI/UX Design", "Debugging & Optimization", "Agile"].map((skill) => (
-                        <span key={skill} className="px-3 py-1 bg-gradient-to-r from-violet-100 to-fuchsia-100 text-violet-700 border border-violet-200 rounded-full text-sm">{skill}</span>
+                        <span key={skill} className="px-3 py-1 bg-gradient-to-r from-violet-100 to-fuchsia-100 text-violet-700 border border-violet-200 rounded-full text-sm cursor-pointer">{skill}</span>
                       ))}
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="w-full p-6 sm:p-8 bg-white rounded-lg shadow-sm border border-gray-200 hover-lift">
-                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">Education & Certifications</h3>
+              <div className="w-full p-6 sm:p-8 bg-white rounded-lg shadow-sm border border-gray-200 hover-lift cursor-pointer">
+                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent cursor-pointer">Education & Certifications</h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-violet-800">Bachelor of Science in Computer Science</h4>
-                    <p className="text-slate-600">Beirut Arab University, Lebanon | Graduated 2025</p>
+                    <h4 className="font-semibold text-violet-800 cursor-pointer">Bachelor of Science in Computer Science</h4>
+                    <p className="text-slate-600 cursor-pointer">Beirut Arab University, Lebanon | Graduated 2025</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-violet-800">Certifications & Training</h4>
-                    <ul className="list-disc ml-5 text-slate-700 space-y-1">
-                      <li>Data Analysis Using SPSS – Beirut Arab University, CEC (2025)</li>
-                      <li>Lebanese Universities CTF 2025 – Certificate of Participation (Cybersecurity Competition)</li>
+                    <h4 className="font-semibold text-violet-800 cursor-pointer">Certifications & Training</h4>
+                    <ul className="list-disc ml-5 text-slate-700 space-y-1 cursor-pointer">
+                      <li className="cursor-pointer">Data Analysis Using SPSS – Beirut Arab University, CEC (2025)</li>
+                      <li className="cursor-pointer">Lebanese Universities CTF 2025 – Certificate of Participation (Cybersecurity Competition)</li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-violet-800">Leadership & Community Engagement</h4>
-                    <p className="text-slate-700">Techtalks Ambassador (2025) – Promoted tech knowledge-sharing events, community building, and developer empowerment initiatives in Lebanon.</p>
+                    <h4 className="font-semibold text-violet-800 cursor-pointer">Leadership & Community Engagement</h4>
+                    <p className="text-slate-700 cursor-pointer">Techtalks Ambassador (2025) – Promoted tech knowledge-sharing events, community building, and developer empowerment initiatives in Lebanon.</p>
                   </div>
                 </div>
               </div>

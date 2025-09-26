@@ -151,7 +151,7 @@ export default function App() {
                 <div className="flex justify-center">
                   <button
                     onClick={handleRetry}
-                    className="px-6 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition font-medium"
+                    className="px-6 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition font-medium cursor-pointer"
                   >
                     Try Again
                   </button>
@@ -178,7 +178,7 @@ export default function App() {
                 className={`
                   flex items-center justify-center
                   px-6 sm:px-10 py-4 sm:py-5 rounded-xl font-semibold text-base sm:text-lg transition-all duration-200
-                  w-full lg:w-auto min-w-[200px] sm:min-w-[250px]
+                  w-full lg:w-auto min-w-[200px] sm:min-w-[250px] cursor-pointer
                   ${isLoading || !pdfExists
                     ? 'bg-gray-300 cursor-not-allowed text-gray-500'
                     : 'bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95'
@@ -207,7 +207,7 @@ export default function App() {
                 className={`
                   flex items-center justify-center
                   px-6 sm:px-10 py-4 sm:py-5 rounded-xl font-semibold text-base sm:text-lg transition-all duration-200 border-2
-                  w-full lg:w-auto min-w-[200px] sm:min-w-[250px]
+                  w-full lg:w-auto min-w-[200px] sm:min-w-[250px] cursor-pointer
                   ${!pdfExists || isLoading
                     ? 'border-gray-300 text-gray-400 cursor-not-allowed'
                     : 'border-violet-600 text-violet-600 hover:bg-violet-50 hover:border-violet-700 hover:text-violet-700'

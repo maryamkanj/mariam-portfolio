@@ -16,6 +16,10 @@ export default function Contact() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const openEmail = () => {
+    window.location.href = 'mailto:kanjmariam696@gmail.com';
+  };
+
   const GitHubIcon = () => (
     <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
       <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
@@ -59,7 +63,7 @@ export default function Contact() {
       description: "Code repositories and projects",
       href: "https://github.com/maryamkanj",
       icon: <GitHubIcon />,
-      buttonText: "See Code"
+      buttonText: "View Profile"
     },
     {
       platform: "LinkedIn", 
@@ -73,9 +77,10 @@ export default function Contact() {
       platform: "Email",
       value: "kanjmariam696@gmail.com",
       description: "Direct contact for projects and collaboration",
-      action: copyEmail,
+      action: openEmail,
+      copyAction: copyEmail,
       icon: <EmailIcon />,
-      buttonText: "Copy Email"
+      buttonText: "Contact Me"
     }
   ];
 
@@ -109,30 +114,36 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto w-full relative z-10">
         <div className={`transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <header className="text-center mb-6 sm:mb-8 lg:mb-12">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent cursor-pointer">
               Get in Touch
             </h1>
-            <p className="text-base sm:text-lg text-slate-600 mb-2">Let's work together</p>
-            <div className="w-24 h-1 bg-gradient-to-r from-violet-600 to-fuchsia-600 mx-auto rounded-full mb-4"></div>
-            <p className="text-sm sm:text-base text-slate-700 max-w-2xl mx-auto px-2">
+            <p className="text-base sm:text-lg text-slate-600 mb-2 cursor-pointer">Let's work together</p>
+            <div className="w-24 h-1 bg-gradient-to-r from-violet-600 to-fuchsia-600 mx-auto rounded-full mb-4 cursor-pointer"></div>
+            <p className="text-sm sm:text-base text-slate-700 max-w-2xl mx-auto px-2 cursor-pointer">
               Available for new projects and opportunities. Reach out through any channel below.
             </p>
           </header>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {contactMethods.map((method) => (
-              <div key={method.platform} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow hover-lift">
-                <div className="text-violet-600 mb-4">{method.icon}</div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">{method.platform}</h3>
-                <p className="text-slate-600 text-sm mb-4">{method.description}</p>
+              <div key={method.platform} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow hover-lift cursor-pointer">
+                <div className="text-violet-600 mb-4 cursor-pointer">{method.icon}</div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 cursor-pointer">{method.platform}</h3>
+                <p className="text-slate-600 text-sm mb-4 cursor-pointer">{method.description}</p>
                 
                 {method.platform === "Email" ? (
                   <div className="space-y-3">
                     <button
                       onClick={method.action}
-                      className="w-full bg-violet-600 text-white py-2 px-4 rounded-lg hover:bg-violet-700 transition-colors font-medium"
+                      className="w-full bg-violet-600 text-white py-2 px-4 rounded-lg hover:bg-violet-700 transition-colors font-medium cursor-pointer"
                     >
-                      {copied ? "✓ Copied!" : method.buttonText}
+                      {method.buttonText}
+                    </button>
+                    <button
+                      onClick={method.copyAction}
+                      className="w-full bg-slate-100 text-slate-700 py-2 px-4 rounded-lg hover:bg-slate-200 transition-colors font-medium cursor-pointer text-sm"
+                    >
+                      {copied ? "✓ Email Copied!" : "Copy Email"}
                     </button>
                   </div>
                 ) : (
@@ -140,7 +151,7 @@ export default function Contact() {
                     href={method.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-slate-100 text-slate-700 py-2 px-4 rounded-lg hover:bg-slate-200 transition-colors text-center font-medium"
+                    className="block w-full bg-violet-600 text-white py-2 px-4 rounded-lg hover:bg-violet-700 transition-colors text-center font-medium cursor-pointer"
                   >
                     {method.buttonText}
                   </a>
@@ -149,14 +160,14 @@ export default function Contact() {
             ))}
           </div>
 
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200 mb-12 hover-lift">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Response Details</h2>
+          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200 mb-12 hover-lift cursor-pointer">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center cursor-pointer">Response Details</h2>
             <div className="grid md:grid-cols-3 gap-6 text-center">
               {responseDetails.map((item, index) => (
-                <div key={index}>
-                  <div className="text-violet-600 mb-2 flex justify-center">{item.icon}</div>
-                  <h3 className="font-semibold text-slate-900 mb-2">{item.title}</h3>
-                  <p className="text-slate-600 text-sm">{item.text}</p>
+                <div key={index} className="cursor-pointer">
+                  <div className="text-violet-600 mb-2 flex justify-center cursor-pointer">{item.icon}</div>
+                  <h3 className="font-semibold text-slate-900 mb-2 cursor-pointer">{item.title}</h3>
+                  <p className="text-slate-600 text-sm cursor-pointer">{item.text}</p>
                 </div>
               ))}
             </div>
