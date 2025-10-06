@@ -95,7 +95,7 @@ export default function App() {
                     company: "Techtalks",
                     position: "Web Development Intern",
                     period: "July 2025 – August 2025",
-                    type: "Hybrid",
+                    type: "Remote",
                     points: ["Built frontend interfaces using Next.js, TypeScript, Tailwind CSS, and shadcn/ui.", "Collaborated with backend developers to integrate Laravel APIs with MySQL databases.", "Worked with Jira for Agile project management and team coordination.", "Strengthened collaboration and problem-solving skills through teamwork in a real-world project."]
                   },
                   {
