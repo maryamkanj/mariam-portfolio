@@ -1,42 +1,51 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 
 export default function ProjectCard({ project }) {
-  const [imageError, setImageError] = useState(false);
   const [showAllFeatures, setShowAllFeatures] = useState(false);
+  const [showFullDescription, setShowFullDescription] = useState(false);
 
   const toggleFeatures = () => {
     setShowAllFeatures(!showAllFeatures);
   };
 
+  const toggleDescription = () => {
+    setShowFullDescription(!showFullDescription);
+  };
+
+  // Check if description is long enough to need truncation
+  const isLongDescription = project.description.length > 120;
+
   return (
     <div className="group bg-white rounded-xl shadow-lg border border-violet-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden cursor-pointer">
-      <div className="relative h-48 bg-gradient-to-br from-violet-50 to-fuchsia-50 overflow-hidden cursor-pointer">
-        {!imageError && project.image ? (
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
-            onError={() => setImageError(true)}
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center cursor-pointer">
-            <div className="text-4xl text-violet-300 cursor-pointer">💫</div>
-          </div>
-        )}
-      </div>
-
       <div className="p-6 cursor-pointer">
         <h3 className="text-xl font-bold text-violet-900 mb-2 group-hover:text-violet-700 transition-colors cursor-pointer">
           {project.title}
         </h3>
         
-        <p className="text-gray-600 mb-4 line-clamp-3 cursor-pointer">
-          {project.description}
-        </p>
+        {/* Description with View More/Less functionality */}
+        <div className="mb-4 cursor-pointer">
+          <p className={`text-gray-600 ${showFullDescription ? '' : 'line-clamp-3'}`}>
+            {project.description}
+          </p>
+          {isLongDescription && (
+            <button
+              onClick={toggleDescription}
+              className="text-sm text-violet-600 font-medium hover:text-violet-800 transition-colors mt-1 flex items-center cursor-pointer"
+            >
+              {showFullDescription ? (
+                <>
+                  <span className="mr-1 cursor-pointer">↑</span> Show less
+                </>
+              ) : (
+                <>
+                  <span className="mr-1 cursor-pointer">↓</span> Read more
+                </>
+              )}
+            </button>
+          )}
+        </div>
 
         <div className="mb-4 cursor-pointer">
           <div className="flex flex-wrap gap-2 cursor-pointer">
@@ -50,6 +59,9 @@ export default function ProjectCard({ project }) {
 
         {project.features && (
           <div className="mb-4 cursor-pointer">
+            <div className="flex items-center gap-2 mb-2 cursor-pointer">
+              <span className="text-sm font-semibold text-violet-700 cursor-pointer">Key Features:</span>
+            </div>
             <ul className="space-y-2 cursor-pointer">
               {project.features.slice(0, showAllFeatures ? project.features.length : 2).map((feature, index) => (
                 <li key={index} className="flex items-start text-sm text-gray-600 cursor-pointer">
@@ -65,7 +77,7 @@ export default function ProjectCard({ project }) {
               >
                 {showAllFeatures ? (
                   <>
-                    <span className="mr-1 cursor-pointer">↑</span> Show less
+                    <span className="mr-1 cursor-pointer">↑</span> Show less features
                   </>
                 ) : (
                   <>
