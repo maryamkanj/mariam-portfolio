@@ -95,6 +95,12 @@ export default function App() {
                 <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">Technical Expertise</h3>
                 <div className="space-y-4">
                   <div>
+                    <h4 className="font-semibold text-violet-800 mb-2">MERN Stack Development</h4>
+                    <p className="text-slate-700 text-sm">
+                      MongoDB, Express.js, React, Node.js with Mongoose ODM, RESTful APIs, and MVC architecture
+                    </p>
+                  </div>
+                  <div>
                     <h4 className="font-semibold text-violet-800 mb-2">Frontend Development</h4>
                     <p className="text-slate-700 text-sm">
                       React, Next.js, Angular, TypeScript, Tailwind CSS, responsive design, and modern UI/UX principles
@@ -103,13 +109,13 @@ export default function App() {
                   <div>
                     <h4 className="font-semibold text-violet-800 mb-2">Backend Development</h4>
                     <p className="text-slate-700 text-sm">
-                      Node.js, ASP.NET, PHP/Laravel, RESTful APIs, database management, and server-side architecture
+                      Node.js, Express.js, MongoDB, ASP.NET, PHP/Laravel, RESTful APIs, database management, and server-side architecture
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-violet-800 mb-2">Mobile & Tools</h4>
+                    <h4 className="font-semibold text-violet-800 mb-2">Performance & Optimization</h4>
                     <p className="text-slate-700 text-sm">
-                      Flutter, Dart, Git, Agile methodologies, Figma, and cross-platform development
+                      Upstash Redis for rate limiting and caching, database optimization, and scalable architecture design
                     </p>
                   </div>
                 </div>
@@ -136,6 +142,12 @@ export default function App() {
                       Strong analytical skills with emphasis on debugging, optimization, and creating efficient, scalable solutions.
                     </p>
                   </div>
+                  <div>
+                    <h4 className="font-semibold text-violet-800">Full-Stack Architecture</h4>
+                    <p className="text-slate-700 text-sm mt-1">
+                      Expertise in designing complete MERN stack applications with proper database modeling and API architecture.
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>
@@ -148,7 +160,8 @@ export default function App() {
                   I believe in the power of technology to create positive change and enjoy working on projects that make a real impact.
                 </p>
                 <p className="text-slate-700 leading-relaxed mt-4">
-                  Currently expanding my expertise in artificial intelligence and its practical applications in software development.
+                  Currently expanding my expertise in artificial intelligence and its practical applications in software development, 
+                  while building robust MERN stack applications with modern tooling like Upstash for enhanced performance.
                 </p>
               </div>
             </section>

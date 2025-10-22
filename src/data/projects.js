@@ -40,6 +40,21 @@ const projects = [
       'Schedule Meetings: Book appointments to meet pets before adoption',
       'Admin Dashboard: Manage pets, schedules, and users with ease'
     ]
+  },
+    {
+    id: 'proj-4',
+    title: 'ThinkBoard',
+    description: 'A full-stack note-taking application built with the MERN stack. Features include creating, updating, and deleting notes with a clean, responsive interface and real-time data management.',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Vite', 'Tailwind CSS', 'DaisyUI', 'Upstash Redis'],
+    repoUrl: 'https://github.com/maryamkanj/ThinkBoard.git',
+    features: [
+      'Full CRUD Operations: Create, read, update, and delete notes with title and description',
+    'RESTful API: Built and tested fully functional REST API with Express.js',
+    'Rate Limiting: Implemented rate limiting using Upstash Redis for enhanced security',
+    'MVC Architecture: Structured backend with Model-View-Controller pattern',
+    'Responsive Design: Clean UI that works seamlessly across all devices',
+    'MongoDB Integration: Efficient data storage and retrieval with MongoDB'
+    ]
   }
 ];
 
