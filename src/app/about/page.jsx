@@ -91,35 +91,29 @@ export default function App() {
             </section>
 
             <section className="grid md:grid-cols-2 gap-6">
-              <div className="w-full p-6 sm:p-8 bg-white rounded-lg shadow-sm border border-gray-200 hover-lift">
-                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">Technical Expertise</h3>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-violet-800 mb-2">MERN Stack Development</h4>
-                    <p className="text-slate-700 text-sm">
-                      MongoDB, Express.js, React, Node.js with Mongoose ODM, RESTful APIs, and MVC architecture
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-violet-800 mb-2">Frontend Development</h4>
-                    <p className="text-slate-700 text-sm">
-                      React, Next.js, Angular, TypeScript, Tailwind CSS, responsive design, and modern UI/UX principles
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-violet-800 mb-2">Backend Development</h4>
-                    <p className="text-slate-700 text-sm">
-                      Node.js, Express.js, MongoDB, ASP.NET, PHP/Laravel, RESTful APIs, database management, and server-side architecture
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-violet-800 mb-2">Performance & Optimization</h4>
-                    <p className="text-slate-700 text-sm">
-                      Upstash Redis for rate limiting and caching, database optimization, and scalable architecture design
-                    </p>
-                  </div>
-                </div>
-              </div>
+  <div className="w-full p-6 sm:p-8 bg-white rounded-lg shadow-sm border border-gray-200 hover-lift">
+    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">Technical Expertise</h3>
+    <div className="space-y-4">
+      <div>
+        <h4 className="font-semibold text-violet-800 mb-2">Frontend Development</h4>
+        <p className="text-slate-700 text-sm">
+          React, Next.js, Angular, TypeScript, Tailwind CSS, responsive design, modern UI/UX principles, and component-based architecture
+        </p>
+      </div>
+      <div>
+        <h4 className="font-semibold text-violet-800 mb-2">Backend Development</h4>
+        <p className="text-slate-700 text-sm">
+          Node.js, Express.js, MongoDB, PostgreSQL, Mongoose ODM, ASP.NET, PHP/Laravel, RESTful APIs, MVC architecture, and server-side development
+        </p>
+      </div>
+      <div>
+        <h4 className="font-semibold text-violet-800 mb-2">Performance & Optimization</h4>
+        <p className="text-slate-700 text-sm">
+          Upstash Redis and Arcjet for rate limiting and caching, database optimization (MongoDB & PostgreSQL), and scalable architecture design
+        </p>
+      </div>
+    </div>
+  </div>
 
               <div className="w-full p-6 sm:p-8 bg-white rounded-lg shadow-sm border border-gray-200 hover-lift">
                 <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">Approach & Values</h3>

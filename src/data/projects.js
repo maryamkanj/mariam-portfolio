@@ -55,6 +55,21 @@ const projects = [
     'Responsive Design: Clean UI that works seamlessly across all devices',
     'MongoDB Integration: Efficient data storage and retrieval with MongoDB'
     ]
+  },
+  {
+    id: 'proj-5',
+    title: 'PosgreStore',
+    description: 'A full-stack product store platform built with the PERN stack, featuring complete product management capabilities with secure rate limiting and bot detection. The application provides a polished, responsive interface for adding, updating, deleting products and theme-selecting with enterprise-grade security measures.',
+    tech: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Vite', 'Tailwind CSS', 'DaisyUI', 'Zustand', 'ArcJet'],
+    repoUrl: 'https://github.com/maryamkanj/PosgreStore.git',
+    features: [
+      'Complete Product Management: Add, update, and delete products with full CRUD operations',
+      'Advanced Security: Rate limiting and bot detection powered by ArcJet for enterprise-level protection',
+      'Theme Selection: Dynamic theme switching with DaisyUI for personalized user experience',
+      'State Management: Efficient state handling using Zustand for optimal performance',
+      'Relational Database: PostgreSQL with Neon for robust data management and relationships',
+      'Modern Architecture: Full-stack application demonstrating scalable PERN stack workflow'
+    ]
   }
 ];
 
