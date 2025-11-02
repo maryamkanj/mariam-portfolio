@@ -70,7 +70,38 @@ const projects = [
       'Relational Database: PostgreSQL with Neon for robust data management and relationships',
       'Modern Architecture: Full-stack application demonstrating scalable PERN stack workflow'
     ]
+  },
+   {
+    id: 'proj-6',
+    title: 'Instagram Clone',
+    description: 'A full-stack Instagram clone built with Laravel, featuring authentication, posts, likes, comments, follows, and responsive design.',
+    tech: ['Laravel 10', 'MySQL', 'Blade templates', 'Bootstrap 5', 'Vanilla JS' ,'Custom CSS','Built-in authentication' ],
+    repoUrl: 'https://github.com/maryamkanj/instagram-clone.git',
+    features: [
+      'Built-in Authentication & Security: Registration, login, password reset, email verification',
+      'Eloquent ORM & MVC: Clean and maintainable backend code with database relationships',
+      'Routing & Middleware: Secure routing for APIs and app logic',
+      'File & Media Handling: Upload, view, delete images',
+      'Blade Templating: Dynamic, reusable frontend views',
+      'Social Features: Likes, comments, follow/unfollow'
+    ]
+  },
+  {
+    id: 'proj-7',
+    title: 'Eventify',
+    description: 'A full-stack event booking app built with React and Node.js using GraphQL. It enables users to fetch and manage data efficiently, book events, and get live updates.',
+    tech: ['React', 'React Router', 'CSS Modules', 'Context API', 'Fetch API', 'Node.js', 'Express', 'express-graphql', 'MongoDB', 'Mongoose', 'JWT'],
+    repoUrl: 'https://github.com/maryamkanj/Eventify.git',
+    features: [
+      'GraphQL Queries & Mutations: Fetch and update only the data needed',
+      'Single Endpoint: Handle queries, mutations, and subscriptions',
+      'Client-Driven Control: Frontend defines returned data',
+      'Typed Schema: Predictable and self-documenting APIs',
+      'Real-time Updates: Subscriptions for live event info',
+      'Full CRUD for Events: Efficient event creation, booking, and management'
+    ]
   }
+
 ];
 
 export default projects;
