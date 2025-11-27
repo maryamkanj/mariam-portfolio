@@ -12,6 +12,10 @@ export default function App() {
   const PDF_PATH = '/pdfs/Mariam_Kanj_CV.pdf';
   const DOWNLOAD_FILENAME = 'Mariam_Kanj_CV_Resume.pdf';
 
+  const getPdfUrl = () => {
+    return `${PDF_PATH}?t=${new Date().getTime()}`;
+  };
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -19,7 +23,7 @@ export default function App() {
   useEffect(() => {
     const checkPdfExists = async () => {
       try {
-        const response = await fetch(PDF_PATH, { method: 'HEAD' });
+        const response = await fetch(getPdfUrl(), { method: 'HEAD' });
 
         if (response.ok) {
           setPdfExists(true);
@@ -47,13 +51,14 @@ export default function App() {
     setError(null);
 
     try {
-      const headResponse = await fetch(PDF_PATH, { method: 'HEAD' });
+      const pdfUrl = getPdfUrl();
+      const headResponse = await fetch(pdfUrl, { method: 'HEAD' });
 
       if (!headResponse.ok) {
         throw new Error(`Resume file not available (HTTP ${headResponse.status})`);
       }
 
-      const response = await fetch(PDF_PATH);
+      const response = await fetch(pdfUrl);
 
       if (!response.ok) {
         throw new Error(`Download failed: ${response.status} ${response.statusText}`);
@@ -89,13 +94,13 @@ export default function App() {
 
   const handleViewPdf = (e) => {
     e.preventDefault();
-    window.open(PDF_PATH, '_blank', 'noopener,noreferrer');
+    window.open(getPdfUrl(), '_blank', 'noopener,noreferrer');
   };
 
   const handleRetry = () => {
     setError(null);
     const checkPdf = async () => {
-      const response = await fetch(PDF_PATH, { method: 'HEAD' });
+      const response = await fetch(getPdfUrl(), { method: 'HEAD' });
       setPdfExists(response.ok);
     };
     checkPdf();
@@ -118,7 +123,7 @@ export default function App() {
           }
         `}
       </style>
-      
+
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-fuchsia-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float animation-delay-2000"></div>
 

@@ -7,11 +7,11 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [currentTech, setCurrentTech] = useState(0);
 
-  const technologies = ["React", "Next.js", "TypeScript", "Node.js", "Flutter", "ASP.NET", "Python"];
+  const technologies = ["React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Laravel/PHP", "Python"];
 
   useEffect(() => {
     setMounted(true);
-    
+
     // Technology rotation effect
     const techInterval = setInterval(() => {
       setCurrentTech((prev) => (prev + 1) % technologies.length);
@@ -44,16 +44,15 @@ export default function Home() {
           }
         `}
       </style>
-      
+
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-fuchsia-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float animation-delay-2000"></div>
       <div className="absolute top-3/4 left-1/3 w-64 h-64 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float animation-delay-4000"></div>
 
       <div className="container mx-auto max-w-4xl w-full text-center relative z-10">
         <div
-          className={`space-y-6 sm:space-y-8 transition-all duration-1000 ${
-            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`space-y-6 sm:space-y-8 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight text-slate-900 cursor-pointer">
             Hi, I'm{" "}
@@ -97,11 +96,10 @@ export default function Home() {
               {technologies.map((tech, index) => (
                 <span
                   key={tech}
-                  className={`px-3 py-1 sm:px-4 sm:py-1.5 bg-white text-slate-700 rounded-full text-xs sm:text-sm font-medium border transition-all duration-300 hover:bg-violet-100 hover:text-violet-700 cursor-pointer ${
-                    index === currentTech 
-                      ? "border-violet-400 bg-violet-50 text-violet-700 scale-110" 
+                  className={`px-3 py-1 sm:px-4 sm:py-1.5 bg-white text-slate-700 rounded-full text-xs sm:text-sm font-medium border transition-all duration-300 hover:bg-violet-100 hover:text-violet-700 cursor-pointer ${index === currentTech
+                      ? "border-violet-400 bg-violet-50 text-violet-700 scale-110"
                       : "border-slate-200"
-                  }`}
+                    }`}
                 >
                   {tech}
                 </span>
