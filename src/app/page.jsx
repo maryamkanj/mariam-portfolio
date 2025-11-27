@@ -97,8 +97,8 @@ export default function Home() {
                 <span
                   key={tech}
                   className={`px-3 py-1 sm:px-4 sm:py-1.5 bg-white text-slate-700 rounded-full text-xs sm:text-sm font-medium border transition-all duration-300 hover:bg-violet-100 hover:text-violet-700 cursor-pointer ${index === currentTech
-                      ? "border-violet-400 bg-violet-50 text-violet-700 scale-110"
-                      : "border-slate-200"
+                    ? "border-violet-400 bg-violet-50 text-violet-700 scale-110"
+                    : "border-slate-200"
                     }`}
                 >
                   {tech}
