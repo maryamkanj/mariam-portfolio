@@ -118,9 +118,7 @@ export default function App() {
         <div className={`transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
 
           <header className="text-center mb-6 sm:mb-8 lg:mb-12">
-            <div className="inline-block mb-3">
-              <span className="text-primary text-sm font-medium tracking-widest uppercase">Curriculum Vitae</span>
-            </div>
+
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               Mariam Kanj - <span className="gradient-text">Resume</span>
             </h1>

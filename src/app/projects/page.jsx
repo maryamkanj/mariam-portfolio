@@ -22,9 +22,6 @@ export default function Projects() {
       <div className="container mx-auto max-w-7xl w-full relative z-10">
         <div className={`transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <div className="text-center mb-16">
-            <div className="inline-block mb-3">
-              <span className="text-primary text-sm font-medium tracking-widest uppercase">Portfolio</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               My <span className="gradient-text">Projects</span>
             </h2>
