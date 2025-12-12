@@ -14,7 +14,8 @@ const projects = [
       'Performance Optimized: Built with Turbopack for lightning-fast builds'
     ],
     category: 'Professional Services',
-    demoUrl: 'https://nassabtranslation.com/'
+    demoUrl: 'https://nassabtranslation.com/',
+    featured: true
   },
   {
     id: 'proj-9',
@@ -32,7 +33,8 @@ const projects = [
       'Real-time Feedback: Loading states and smooth animations'
     ],
     category: 'AI Application',
-    demoUrl: 'https://www.linkedin.com/posts/mariamkanj_meet-youma-x-my-ai-integrated-mern-chatbot-activity-7402291220561154048-PK5N?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAExV-D4BmqTdfEVMHRMh8rjOjbQRs5fHSOU'
+    demoUrl: 'https://www.linkedin.com/posts/mariamkanj_meet-youma-x-my-ai-integrated-mern-chatbot-activity-7402291220561154048-PK5N?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAExV-D4BmqTdfEVMHRMh8rjOjbQRs5fHSOU',
+    featured: true
   },
   {
     id: 'proj-10',
@@ -50,7 +52,8 @@ const projects = [
       'Model Evaluation: Comprehensive metrics including confusion matrices and F1 scores'
     ],
     category: 'Machine Learning',
-    demoUrl: null
+    demoUrl: null,
+    featured: true
   },
   {
     id: 'proj-1',
@@ -67,7 +70,8 @@ const projects = [
       'Real-time Updates: Dynamic charts and progress tracking'
     ],
     category: 'Finance',
-    demoUrl: null
+    demoUrl: null,
+    featured: false
   },
   {
     id: 'proj-2',
@@ -82,7 +86,8 @@ const projects = [
       'Smart Admin Tools: Monitor and manage everything efficiently'
     ],
     category: 'Social Impact',
-    demoUrl: null
+    demoUrl: null,
+    featured: false
   },
   {
     id: 'proj-3',
@@ -98,7 +103,8 @@ const projects = [
       'Admin Dashboard: Manage pets, schedules, and users with ease'
     ],
     category: 'Social Platform',
-    demoUrl: null
+    demoUrl: null,
+    featured: false
   },
   {
     id: 'proj-4',
@@ -115,7 +121,8 @@ const projects = [
       'MongoDB Integration: Efficient data storage and retrieval with MongoDB'
     ],
     category: 'Productivity',
-    demoUrl: null
+    demoUrl: null,
+    featured: false
   },
   {
     id: 'proj-5',
@@ -132,7 +139,8 @@ const projects = [
       'Modern Architecture: Full-stack application demonstrating scalable PERN stack workflow'
     ],
     category: 'E-commerce',
-    demoUrl: null
+    demoUrl: null,
+    featured: false
   },
   {
     id: 'proj-6',
@@ -149,7 +157,8 @@ const projects = [
       'Social Features: Likes, comments, follow/unfollow'
     ],
     category: 'Social Media',
-    demoUrl: null
+    demoUrl: null,
+    featured: false
   },
   {
     id: 'proj-7',
@@ -166,7 +175,8 @@ const projects = [
       'Full CRUD for Events: Efficient event creation, booking, and management'
     ],
     category: 'Event Management',
-    demoUrl: null
+    demoUrl: null,
+    featured: false
   }
 ];
 
