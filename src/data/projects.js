@@ -1,5 +1,58 @@
 const projects = [
   {
+    id: 'proj-8',
+    title: 'Nasab Translation',
+    description: 'Professional translator portfolio website featuring multilingual services (French, Arabic, English), contact information, and detailed translator profile. The website showcases translation expertise across various domains including legal, medical, technical, and literary translations with a modern, responsive design.',
+    tech: ['Next.js 15', 'React 19', 'Tailwind CSS 4', 'Radix UI', 'Framer Motion', 'Class Variance Authority', 'Turbopack', 'ESLint 9', 'PostCSS'],
+    repoUrl: null,
+    features: [
+      'Multilingual Support: Professional translation services in French, Arabic, and English',
+      'Modern Architecture: Built with Next.js 15 App Router and Server Components',
+      'Interactive UI: Smooth animations and transitions using Framer Motion',
+      'Component Variants: Reusable UI components with Class Variance Authority',
+      'Responsive Design: Optimized for all devices and screen sizes',
+      'Performance Optimized: Built with Turbopack for lightning-fast builds'
+    ],
+    category: 'Professional Services',
+    demoUrl: 'https://nassabtranslation.com/'
+  },
+  {
+    id: 'proj-9',
+    title: 'YoumaX AI',
+    description: 'A full-stack AI chat application powered by Google Gemini 2.5 Flash model for intelligent conversations and ImageKit for AI image generation. Features a dual-mode interface for seamless switching between text and image generation with secure authentication and persistent chat history.',
+    tech: ['React 19', 'Node.js', 'Express 5', 'MongoDB', 'Gemini AI', 'ImageKit', 'JWT Auth', 'Vite', 'Tailwind CSS 4', 'React Router 7'],
+    repoUrl: 'https://github.com/maryamkanj/youmaX-ai.git',
+    features: [
+      'Advanced AI Chat: Context-aware conversations using Gemini 2.5 Flash model',
+      'AI Image Generation: Create images from text prompts via ImageKit',
+      'Dual Mode Interface: Switch between Text Mode and Image Mode',
+      'Secure Authentication: JWT-based user registration and login system',
+      'Persistent Chat History: MongoDB storage for all conversations',
+      'Markdown Support: Rich text formatting for code blocks and lists',
+      'Real-time Feedback: Loading states and smooth animations'
+    ],
+    category: 'AI Application',
+    demoUrl: 'https://www.linkedin.com/posts/mariamkanj_meet-youma-x-my-ai-integrated-mern-chatbot-activity-7402291220561154048-PK5N?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAExV-D4BmqTdfEVMHRMh8rjOjbQRs5fHSOU'
+  },
+  {
+    id: 'proj-10',
+    title: 'AI/ML Learning Projects',
+    description: 'A comprehensive collection of hands-on machine learning projects demonstrating practical implementation of AI algorithms. Includes Tic-Tac-Toe AI with Minimax algorithm, color palette extraction with K-Means clustering, spam detection using Naive Bayes, Titanic survival prediction with multiple ML models, and Fashion MNIST classification with neural networks.',
+    tech: ['Python', 'TensorFlow/Keras', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Tkinter', 'OpenCV', 'Seaborn', 'XGBoost'],
+    repoUrl: 'https://github.com/maryamkanj/ai-ml-course-projects.git',
+    features: [
+      'Tic-Tac-Toe AI: Unbeatable AI opponent using Minimax algorithm with Tkinter GUI',
+      'Color Palette Extractor: K-Means clustering for dominant color extraction from images',
+      'Spam Detection: Multinomial Naive Bayes classifier for SMS/email spam filtering',
+      'Titanic Survival Prediction: Comparative analysis of 6 ML models with hyperparameter tuning',
+      'Fashion MNIST Classification: Neural network for clothing image classification',
+      'End-to-end ML Pipelines: From data preprocessing to model deployment',
+      'Model Evaluation: Comprehensive metrics including confusion matrices and F1 scores'
+    ],
+    category: 'Machine Learning',
+    demoUrl: null
+  },
+  {
     id: 'proj-1',
     title: 'BudgetBuddy',
     description: 'A comprehensive personal finance management website that helps users track spending, set savings goals, and manage their budget effectively. Built with modern web technologies, BudgetBuddy features intuitive charts for expense tracking, goal progress monitoring, and salary allocation tools. The app provides real-time insights into your financial health with beautiful visualizations and responsive design that works seamlessly across all devices.',
@@ -12,7 +65,9 @@ const projects = [
       'Salary Management: Allocate monthly income across different spending categories',
       'Local Data Storage: Secure client-side data handling with no external backend',
       'Real-time Updates: Dynamic charts and progress tracking'
-    ]
+    ],
+    category: 'Finance',
+    demoUrl: null
   },
   {
     id: 'proj-2',
@@ -25,7 +80,9 @@ const projects = [
       'Seamless User Experience: Easy profiles and smooth verification',
       'Engaged Community: Share ideas, follow updates, and interact',
       'Smart Admin Tools: Monitor and manage everything efficiently'
-    ]
+    ],
+    category: 'Social Impact',
+    demoUrl: null
   },
   {
     id: 'proj-3',
@@ -39,9 +96,11 @@ const projects = [
       'Community Space: Post, share tips, and connect with other pet lovers',
       'Schedule Meetings: Book appointments to meet pets before adoption',
       'Admin Dashboard: Manage pets, schedules, and users with ease'
-    ]
+    ],
+    category: 'Social Platform',
+    demoUrl: null
   },
-    {
+  {
     id: 'proj-4',
     title: 'ThinkBoard',
     description: 'A full-stack note-taking application built with the MERN stack. Features include creating, updating, and deleting notes with a clean, responsive interface and real-time data management.',
@@ -49,12 +108,14 @@ const projects = [
     repoUrl: 'https://github.com/maryamkanj/ThinkBoard.git',
     features: [
       'Full CRUD Operations: Create, read, update, and delete notes with title and description',
-    'RESTful API: Built and tested fully functional REST API with Express.js',
-    'Rate Limiting: Implemented rate limiting using Upstash Redis for enhanced security',
-    'MVC Architecture: Structured backend with Model-View-Controller pattern',
-    'Responsive Design: Clean UI that works seamlessly across all devices',
-    'MongoDB Integration: Efficient data storage and retrieval with MongoDB'
-    ]
+      'RESTful API: Built and tested fully functional REST API with Express.js',
+      'Rate Limiting: Implemented rate limiting using Upstash Redis for enhanced security',
+      'MVC Architecture: Structured backend with Model-View-Controller pattern',
+      'Responsive Design: Clean UI that works seamlessly across all devices',
+      'MongoDB Integration: Efficient data storage and retrieval with MongoDB'
+    ],
+    category: 'Productivity',
+    demoUrl: null
   },
   {
     id: 'proj-5',
@@ -69,13 +130,15 @@ const projects = [
       'State Management: Efficient state handling using Zustand for optimal performance',
       'Relational Database: PostgreSQL with Neon for robust data management and relationships',
       'Modern Architecture: Full-stack application demonstrating scalable PERN stack workflow'
-    ]
+    ],
+    category: 'E-commerce',
+    demoUrl: null
   },
-   {
+  {
     id: 'proj-6',
     title: 'Instagram Clone',
     description: 'A full-stack Instagram clone built with Laravel, featuring authentication, posts, likes, comments, follows, and responsive design.',
-    tech: ['Laravel 10', 'MySQL', 'Blade templates', 'Bootstrap 5', 'Vanilla JS' ,'Custom CSS','Built-in authentication' ],
+    tech: ['Laravel 10', 'MySQL', 'Blade templates', 'Bootstrap 5', 'Vanilla JS', 'Custom CSS', 'Built-in authentication'],
     repoUrl: 'https://github.com/maryamkanj/instagram-clone.git',
     features: [
       'Built-in Authentication & Security: Registration, login, password reset, email verification',
@@ -84,7 +147,9 @@ const projects = [
       'File & Media Handling: Upload, view, delete images',
       'Blade Templating: Dynamic, reusable frontend views',
       'Social Features: Likes, comments, follow/unfollow'
-    ]
+    ],
+    category: 'Social Media',
+    demoUrl: null
   },
   {
     id: 'proj-7',
@@ -99,9 +164,10 @@ const projects = [
       'Typed Schema: Predictable and self-documenting APIs',
       'Real-time Updates: Subscriptions for live event info',
       'Full CRUD for Events: Efficient event creation, booking, and management'
-    ]
+    ],
+    category: 'Event Management',
+    demoUrl: null
   }
-
 ];
 
 export default projects;
