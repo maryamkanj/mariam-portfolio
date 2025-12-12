@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { SOCIAL_LINKS, CONTACT_EMAIL } from "@/lib/constants";
 
 export default function Footer() {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -20,7 +21,7 @@ export default function Footer() {
 
   const socialLinks = [
     {
-      href: "https://github.com/maryamkanj",
+      href: SOCIAL_LINKS.GITHUB,
       label: "GitHub",
       icon: (
         <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -29,7 +30,7 @@ export default function Footer() {
       )
     },
     {
-      href: "https://www.linkedin.com/in/mariamkanj/",
+      href: SOCIAL_LINKS.LINKEDIN,
       label: "LinkedIn",
       icon: (
         <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -38,7 +39,7 @@ export default function Footer() {
       )
     },
     {
-      href: "mailto:kanjmariam696@gmail.com",
+      href: `mailto:${CONTACT_EMAIL}`,
       label: "Email",
       icon: (
         <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">

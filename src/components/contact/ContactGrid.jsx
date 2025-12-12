@@ -1,18 +1,19 @@
 'use client';
 
 import { useState } from 'react';
+import { SOCIAL_LINKS, CONTACT_EMAIL } from '@/lib/constants';
 
 export default function ContactGrid() {
     const [copied, setCopied] = useState(false);
 
     const copyEmail = () => {
-        navigator.clipboard.writeText('kanjmariam696@gmail.com');
+        navigator.clipboard.writeText(CONTACT_EMAIL);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
     };
 
     const openEmail = () => {
-        window.location.href = 'mailto:kanjmariam696@gmail.com';
+        window.location.href = `mailto:${CONTACT_EMAIL}`;
     };
 
     const GitHubIcon = () => (
@@ -38,7 +39,7 @@ export default function ContactGrid() {
             platform: "GitHub",
             value: "maryamkanj",
             description: "Code repositories and projects",
-            href: "https://github.com/maryamkanj",
+            href: SOCIAL_LINKS.GITHUB,
             icon: <GitHubIcon />,
             buttonText: "View Profile"
         },
@@ -46,13 +47,13 @@ export default function ContactGrid() {
             platform: "LinkedIn",
             value: "mariamkanj",
             description: "Professional network and experience",
-            href: "https://linkedin.com/in/mariamkanj",
+            href: SOCIAL_LINKS.LINKEDIN,
             icon: <LinkedInIcon />,
             buttonText: "View Profile"
         },
         {
             platform: "Email",
-            value: "kanjmariam696@gmail.com",
+            value: CONTACT_EMAIL,
             description: "Direct contact for projects and collaboration",
             action: openEmail,
             copyAction: copyEmail,

@@ -3,6 +3,7 @@ import TechStack from "@/components/home/TechStack";
 import PageTransition from "@/components/ui/PageTransition";
 import ProjectCard from "@/components/ProjectCard";
 import projects from "@/data/projects";
+import { RESUME_PATH, RESUME_FILENAME, SOCIAL_LINKS } from "@/lib/constants";
 
 export const metadata = {
   title: 'Home | Mariam Kanj',
@@ -63,8 +64,8 @@ export default function Home() {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
                   <a
-                    href="/pdfs/Mariam_Kanj_CV.pdf"
-                    download="Mariam_Kanj_Resume.pdf"
+                    href={RESUME_PATH}
+                    download={RESUME_FILENAME}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group relative px-8 py-3 bg-gradient-to-r from-primary to-pink-600 text-white rounded-full font-bold hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 overflow-hidden hover:scale-105 cursor-pointer flex items-center justify-center gap-2"
@@ -193,7 +194,7 @@ export default function Home() {
                     </Link>
 
                     <a
-                      href="https://github.com/maryamkanj"
+                      href={SOCIAL_LINKS.GITHUB}
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       className="sm:w-auto w-full"
