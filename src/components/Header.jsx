@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState("/");
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,20 +20,12 @@ export default function Header() {
       setIsScrolled(window.scrollY > 10);
     };
 
-    const handleRouteChange = () => {
-      setActiveLink(window.location.pathname);
-    };
-
-    handleRouteChange();
-
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("popstate", handleRouteChange);
 
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("popstate", handleRouteChange);
     };
   }, []);
 
@@ -44,8 +37,7 @@ export default function Header() {
     { href: "/resume", label: "Resume" },
   ];
 
-  const handleLinkClick = (href) => {
-    setActiveLink(href);
+  const handleLinkClick = () => {
     setIsMenuOpen(false);
   };
 
@@ -57,7 +49,7 @@ export default function Header() {
           <Link
             href="/"
             className="group flex-shrink-0 outline-none focus:outline-none"
-            onClick={() => handleLinkClick("/")}
+            onClick={handleLinkClick}
           >
             <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl text-primary transition-all duration-300 group-hover:text-pink-400 hover:scale-105">
               Mariam Kanj
@@ -70,14 +62,14 @@ export default function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    onClick={() => handleLinkClick(link.href)}
-                    className={`font-medium transition-all duration-300 relative py-2 text-base xl:text-lg outline-none focus:outline-none ${activeLink === link.href
+                    onClick={handleLinkClick}
+                    className={`font-medium transition-all duration-300 relative py-2 text-base xl:text-lg outline-none focus:outline-none ${pathname === link.href
                       ? "text-primary font-semibold"
                       : "text-white/90 hover:text-primary"
                       }`}
                   >
                     {link.label}
-                    <span className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${activeLink === link.href
+                    <span className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${pathname === link.href
                       ? "w-full bg-gradient-to-r from-primary to-pink-400"
                       : "w-0 bg-primary group-hover:w-full"
                       }`}></span>
@@ -93,14 +85,14 @@ export default function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    onClick={() => handleLinkClick(link.href)}
-                    className={`font-medium transition-all duration-300 relative py-2 text-sm outline-none focus:outline-none ${activeLink === link.href
+                    onClick={handleLinkClick}
+                    className={`font-medium transition-all duration-300 relative py-2 text-sm outline-none focus:outline-none ${pathname === link.href
                       ? "text-primary font-semibold"
                       : "text-white/90 hover:text-primary"
                       }`}
                   >
                     {link.label}
-                    <span className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${activeLink === link.href
+                    <span className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${pathname === link.href
                       ? "w-full bg-gradient-to-r from-primary to-pink-400"
                       : "w-0 bg-primary group-hover:w-full"
                       }`}></span>
@@ -149,8 +141,8 @@ export default function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    onClick={() => handleLinkClick(link.href)}
-                    className={`block py-4 px-6 rounded-lg font-medium transition-all duration-200 border outline-none focus:outline-none ${activeLink === link.href
+                    onClick={handleLinkClick}
+                    className={`block py-4 px-6 rounded-lg font-medium transition-all duration-200 border outline-none focus:outline-none ${pathname === link.href
                       ? "text-primary bg-pink-900/20 border-primary/50 font-semibold"
                       : "text-white/90 hover:text-primary hover:bg-pink-900/10 border-transparent hover:border-pink-500/30"
                       } text-lg`}

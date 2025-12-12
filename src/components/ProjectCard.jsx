@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function ProjectCard({ project }) {
   const [showAllFeatures, setShowAllFeatures] = useState(false);
@@ -26,7 +27,19 @@ export default function ProjectCard({ project }) {
 
   return (
     <div className="group bg-black rounded-xl shadow-lg border border-gray-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden flex flex-col h-full">
-      <div className="p-6 flex-grow">
+      {project.image && (
+        <div className="relative h-48 w-full overflow-hidden">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+        </div>
+      )}
+      <div className={`p-6 flex-grow ${project.image ? '' : ''}`}>
         {/* Category Badge */}
         {project.category && (
           <div className="mb-4 inline-block px-3 py-1 bg-pink-900/30 text-pink-400 text-xs font-semibold rounded-full border border-pink-800/50">
