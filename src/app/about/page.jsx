@@ -1,14 +1,11 @@
-'use client';
+import PageTransition from "@/components/ui/PageTransition";
 
-import { useState, useEffect } from "react";
+export const metadata = {
+  title: 'About | Mariam Kanj',
+  description: 'Learn about my journey as a full-stack developer, my technical expertise, and my passion for AI and innovation.',
+};
 
-export default function App() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
+export default function About() {
   return (
     <div className="flex-grow bg-black-main flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-10 min-h-screen relative overflow-hidden w-full">
       <style>
@@ -43,8 +40,7 @@ export default function App() {
       </div>
 
       <div className="w-full max-w-6xl mx-auto relative z-10">
-        <div className={`transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-
+        <PageTransition>
           <header className="text-center mb-6 sm:mb-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 gradient-text">
               About Me
@@ -206,7 +202,7 @@ export default function App() {
               ))}
             </div>
           </section>
-        </div>
+        </PageTransition>
       </div>
     </div>
   );

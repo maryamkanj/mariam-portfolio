@@ -1,16 +1,13 @@
-'use client';
-
 import ProjectCard from '@/components/ProjectCard';
 import projects from '@/data/projects';
-import { useState, useEffect } from "react";
+import PageTransition from '@/components/ui/PageTransition';
+
+export const metadata = {
+  title: 'Projects | Mariam Kanj',
+  description: 'Explore my latest full-stack development projects, including AI applications, e-commerce platforms, and more.',
+};
 
 export default function Projects() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <div className="flex-grow bg-black-main min-h-screen px-4 sm:px-6 py-12 sm:py-16 relative overflow-hidden">
       {/* Background effects matching homepage */}
@@ -20,7 +17,7 @@ export default function Projects() {
       </div>
 
       <div className="container mx-auto max-w-7xl w-full relative z-10">
-        <div className={`transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <PageTransition>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               My <span className="gradient-text">Projects</span>
@@ -43,7 +40,7 @@ export default function Projects() {
               <p className="text-white/60">I'm currently working on some exciting projects. Check back later!</p>
             </div>
           )}
-        </div>
+        </PageTransition>
       </div>
     </div>
   );
