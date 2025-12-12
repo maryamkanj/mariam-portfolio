@@ -1,5 +1,5 @@
 export default function sitemap() {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://mariam-portfolio-zeta.vercel.app'; // Replace with actual domain if different
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://mariamkanj.netlify.app'; // Replace with actual domain if different
 
     const routes = [
         '',

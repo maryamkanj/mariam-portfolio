@@ -1,5 +1,5 @@
 export default function robots() {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://mariam-portfolio-zeta.vercel.app';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://mariamkanj.netlify.app';
     return {
         rules: {
             userAgent: '*',

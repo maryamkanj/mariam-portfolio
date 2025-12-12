@@ -8,4 +8,4 @@ export const SOCIAL_LINKS = {
 
 export const CONTACT_EMAIL = 'kanjmariam696@gmail.com';
 
-export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://mariam-portfolio-zeta.vercel.app';
+export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://mariamkanj.netlify.app';
