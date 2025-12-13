@@ -1,22 +1,22 @@
 const projects = [
-  {
-    id: 'proj-8',
-    title: 'Nasab Translation',
-    description: 'Professional translator portfolio website featuring multilingual services (French, Arabic, English), contact information, and detailed translator profile. The website showcases translation expertise across various domains including legal, medical, technical, and literary translations with a modern, responsive design.',
-    tech: ['Next.js 15', 'React 19', 'Tailwind CSS 4', 'Radix UI', 'Framer Motion', 'Class Variance Authority', 'Turbopack', 'ESLint 9', 'PostCSS'],
-    repoUrl: null,
-    features: [
-      'Multilingual Support: Professional translation services in French, Arabic, and English',
-      'Modern Architecture: Built with Next.js 15 App Router and Server Components',
-      'Interactive UI: Smooth animations and transitions using Framer Motion',
-      'Component Variants: Reusable UI components with Class Variance Authority',
-      'Responsive Design: Optimized for all devices and screen sizes',
-      'Performance Optimized: Built with Turbopack for lightning-fast builds'
-    ],
-    category: 'Professional Services',
-    demoUrl: 'https://nassabtranslation.com/',
-    featured: true
-  },
+  // {
+  //   id: 'proj-8',
+  //   title: 'Nasab Translation',
+  //   description: 'Professional translator portfolio website featuring multilingual services (French, Arabic, English), contact information, and detailed translator profile. The website showcases translation expertise across various domains including legal, medical, technical, and literary translations with a modern, responsive design.',
+  //   tech: ['Next.js 15', 'React 19', 'Tailwind CSS 4', 'Radix UI', 'Framer Motion', 'Class Variance Authority', 'Turbopack', 'ESLint 9', 'PostCSS'],
+  //   repoUrl: null,
+  //   features: [
+  //     'Multilingual Support: Professional translation services in French, Arabic, and English',
+  //     'Modern Architecture: Built with Next.js 15 App Router and Server Components',
+  //     'Interactive UI: Smooth animations and transitions using Framer Motion',
+  //     'Component Variants: Reusable UI components with Class Variance Authority',
+  //     'Responsive Design: Optimized for all devices and screen sizes',
+  //     'Performance Optimized: Built with Turbopack for lightning-fast builds'
+  //   ],
+  //   category: 'Professional Services',
+  //   demoUrl: 'https://nassabtranslation.com/',
+  //   featured: true
+  // },
   {
     id: 'proj-9',
     title: 'YoumaX AI',
