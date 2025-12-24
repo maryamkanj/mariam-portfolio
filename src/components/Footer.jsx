@@ -73,9 +73,7 @@ export default function Footer() {
           <p className="text-white/80 text-xs sm:text-sm lg:text-base px-2 font-medium">
             &copy; {new Date().getFullYear()} Mariam Kanj. All rights reserved.
           </p>
-          <p className="text-pink-400/70 text-xs mt-2 px-2">
-            Crafted with passion and precision
-          </p>
+
         </div>
 
         <button

@@ -188,8 +188,8 @@ export default function About() {
                 { name: "Express.js", color: "bg-gray-500/10 text-gray-300" },
                 { name: "Tailwind", color: "bg-teal-500/10 text-teal-400" },
                 { name: "Git", color: "bg-orange-500/10 text-orange-400" },
-                { name: "AWS", color: "bg-yellow-500/10 text-yellow-400" },
-                { name: "Docker", color: "bg-blue-500/10 text-blue-400" },
+                { name: "Flutter", color: "bg-yellow-500/10 text-yellow-400" },
+                { name: "ASP.NET", color: "bg-blue-500/10 text-blue-400" },
                 { name: "Python", color: "bg-yellow-500/10 text-yellow-300" },
                 { name: "AI/ML", color: "bg-purple-500/10 text-purple-400" },
               ].map((skill, index) => (

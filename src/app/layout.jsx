@@ -25,19 +25,12 @@ export const metadata = {
     siteName: 'Mariam Kanj Portfolio',
     images: [
       {
-        url: '/images/portfolio-image.png', // User will place the image here
+        url: '/images/portfolio-image.png',
         width: 1200,
         height: 630,
         alt: 'Mariam Kanj - Full Stack Developer',
       },
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Mariam Kanj | Full Stack Developer',
-    description: 'Building exceptional digital experiences with modern web technologies.',
-    images: ['/images/portfolio-image.png'],
-    creator: '@mariamkanj', // Placeholder, update if you have a specific handle
   },
   robots: {
     index: true,
